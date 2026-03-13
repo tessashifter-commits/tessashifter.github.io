@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="cyber-header"></div>
+  <div id="header" class="cyber-header"></div>
   <script>
   const header = document.getElementById("header");
 
@@ -25,14 +25,14 @@
     blinkCount++;
 
     if (blinkCount < 10) { 
-      setTimeout(blink, 300;
+      setTimeout(blink, 300);
     } else {
       header.textContent = "";
       typeWriter( ) ;
     }
   }
 
-    let 1 = 0;
+    let i = 0;
 
     function typeWriter() {
 
