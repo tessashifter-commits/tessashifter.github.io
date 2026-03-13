@@ -8,6 +8,11 @@ body {
 }
 
 .cyber-header {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   font-family: 'Orbitron', sans-serif;
   color: #ff0033;
   text-align: center;
@@ -109,4 +114,19 @@ body {
   50% { transform: translate(-2px, 0); opacity: 0.55; }
   75% { transform: translate(1px, -1px); opacity: 0.9; }
   100% { transform: translate(0, 0); opacity: 0.7; }
+}
+
+.hidden-content,
+.visible-content {
+  transition: opacity 0.35s ease;
+}
+
+.hidden-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible-content {
+  opacity: 1;
+  visibility: visible;
 }
