@@ -17,12 +17,37 @@
   let blinkCount = 0;
   let visible = true;
 
-  function blink( ) [
+  function blink( ) {
 
     header.textContent = visible ? blinkText : "";
 
-    visible = !visible
-    blinkCount
+    visible = !visible;
+    blinkCount++;
+
+    if (blinkCount < 10) { 
+      setTimeout(blink, 300;
+    } else {
+      header.textContent = "";
+      typeWriter( ) ;
+    }
+  }
+
+    let 1 = 0;
+
+    function typeWriter() {
+
+      if (i < finalText.length) {
+
+        header.textContent += finalText.chartAt(i);
+
+        i++;
+
+        setTimeout(typeWriter, 80);
+
+      }
+    }
+
+    blink();
   </script>
 </body>
 </html>
