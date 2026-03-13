@@ -53,6 +53,8 @@
       setTimeout(blink, 300);
     } else {
       header.textContent = "";
+      pageContent.classList.remove("hidden-content");
+      pageContent.classList.add("visible-content");
       typeWriter( ) ;
     }
   }
