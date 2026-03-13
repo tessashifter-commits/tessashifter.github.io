@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="cyber-header">
-ACESS TERMINAL
+ACCESS TERMINAL
 </div>
 
 Welcome to my site
