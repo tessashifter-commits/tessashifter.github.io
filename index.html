@@ -31,7 +31,6 @@
       <span class="value">Unclear</span>
     </div>
   </div>
-</div>
 
 <div class="tab-bar">
   <button class="tab-button active" data-tab="debrief">Debrief</button>
@@ -57,11 +56,18 @@
     <p>Form list content</p>
   </section>
 
+  <secetion class="tab-panel" id="known-associates">
+    <h2>Known associates</h2>
+    <p>Known associates content</p>
+
   <section class="tab-panel" id="arsenal">
     <h2>Arsenal</h2>
     <p>Arsenal content</p>
   </section>
 </div>
+  
+</div>
+
   
   <script>
   const header = document.getElementById("header");
@@ -110,7 +116,7 @@
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabPanels = document.querySelectorAll (".tab-panel");
 
-  tabButtons.forEach(button) => {
+  tabButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const targetId = button.dataset.tab;
 
@@ -119,7 +125,7 @@
 
       button.classList.add("active");
       document.getElementById(targetId).classList.add("active");
-      ]);
+    });
   });
 
     
