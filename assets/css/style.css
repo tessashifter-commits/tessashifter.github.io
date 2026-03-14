@@ -34,7 +34,7 @@ body {
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   align-items: start;
 
@@ -160,12 +160,12 @@ body {
   color: #ffd6de;
   border-color: rgba(255, 0, 51, 0.7);
   box-shadow:
-    0 0 8px rgba(255. 0, 51, 0.25),
+    0 0 8px rgba(255, 0, 51, 0.25),
     inset 0 0 8px rgba(255, 0, 51, 0.12);
 }
 
-.tab-button:active {
-  transform: transalte(1px);
+.tab-button.active {
+  transform: translate(1px);
 }
 
 .tab-button:active {
@@ -182,11 +182,11 @@ body {
 
 .tab-content {
   margin: 0 24px 24px 24px;
-  padding: 18pc;
+  padding: 18px;
   border: 1px solid rgba(255, 0, 51, 0.28);
   background: rgba(255, 255, 255, 0.02);
   box-shadow:
-    inset 0 0 18px,
+    inset 0 0 18px rgba(255, 0, 51, 0.05),
     0 0 16px rgba(255, 0, 51, 0.05);
   min-height: 220px;
 }
