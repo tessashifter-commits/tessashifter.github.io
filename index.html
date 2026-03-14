@@ -112,17 +112,39 @@
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabPanels = document.querySelectorAll (".tab-panel");
 
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const targetId = button.dataset.tab;
+  const tabFiles = {
+    "debrief": "assets/content/debrief.html",
+    "incident-reports":"assets/content/incident-reports",
+    "form-list":"assets/content/form-list",
+    "known-associates":"assets/content/known-associates",
+    "arsenal":"assets/content/arsenal"
+  };
 
-      tabButtons.forEach((btn) => btn.classList.remove("active"));
-      tabPanels.forEach((panel) => panel.classList.remove("active"));
+  const loadedTabs = new Set();
 
-      button.classList.add("active");
-      document.getElementById(targetId).classList.add("active");
-    });
-  });
+  async function loadTabContent(tabId) {
+
+    if (loadedTabs.has(tabId)) return;
+
+    const container = document.getElementById('$[tabId}-content');
+
+    if (!container) return;
+
+    try {
+
+      const response = await fetch(tabFiles[tabId]);
+
+      if (!response.ok) {
+        container.innerHTML = "<p>Data retrieval failure</p>"
+        return;
+      }
+
+      const html = await response.text();
+      container.innerHTML = html;
+
+      loadedTabs.add(tabId);
+
+      */up to here/*
 
     
   </script>
