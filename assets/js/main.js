@@ -1,5 +1,5 @@
 
-<script>
+
   const header = document.getElementById("header");
   const pageContent = document.getElementById("page-content");
 
@@ -40,7 +40,7 @@
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
-  const tabFIles = {
+  const tabFiles = {
     "debrief": "assets/content/debrief.html",
     "incident-reports": "assets/content/incident-reports.html",
     "form-list": "assets/content/form-list.html",
@@ -97,6 +97,3 @@ function initializeSite() {
 }
 
 initializeSite();
-
-
-  </script>
